@@ -4,7 +4,7 @@ import Utils.Service;
 
 import java.util.*;
 
-public abstract class Book {
+public abstract class Book{
     private static int id = 0;
 
     private final int book_id;
@@ -13,6 +13,8 @@ public abstract class Book {
     private int page_count;
 
     private Date release_date;
+
+    protected int popularity;
 
     private List<Integer> authors_ids;
     protected abstract void method();
@@ -71,6 +73,22 @@ public abstract class Book {
         this.authors_ids = authors_ids;
     }
 
+    public int getPopularity() {
+        return popularity;
+    }
+
+    public void setPopularity(int popularity) {
+        this.popularity = popularity;
+    }
+
+    public void increase_popularity(){
+        this.popularity++;
+    }
+
+    public int getBook_id() {
+        return book_id;
+    }
+
     @Override
     public String toString() {
         return
@@ -78,6 +96,7 @@ public abstract class Book {
                 ", title='" + title + '\'' +
                 ", page_count=" + page_count +
                 ", release_date=" + release_date +
-                ", authors=" + authors_ids;
+                ", authors=" + authors_ids +
+                ", popularity=" + popularity;
     }
 }

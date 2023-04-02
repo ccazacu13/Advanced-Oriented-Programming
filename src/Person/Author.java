@@ -5,6 +5,9 @@ import java.util.Scanner;
 
 public class Author extends Person{
 
+    private static int id = 0;
+
+    private final int author_id;
     private String favorite_genre;
 
     private int book_count;
@@ -13,11 +16,12 @@ public class Author extends Person{
 
     public Author()
     {
-        super();
+        this.author_id = id++;
     }
 
     public Author(String first_name, String last_name, String CNP, String phone, Date birth_date, Address address, String favorite_genre, int book_count) {
         super(first_name, last_name, CNP, phone, birth_date, address);
+        this.author_id = id++;
         this.favorite_genre = favorite_genre;
         this.book_count = book_count;
     }
@@ -36,6 +40,10 @@ public class Author extends Person{
 
     public void setBook_count(int book_count) {
         this.book_count = book_count;
+    }
+
+    public int getAuthor_id() {
+        return author_id;
     }
 
     @Override

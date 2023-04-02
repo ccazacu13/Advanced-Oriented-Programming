@@ -18,7 +18,9 @@ public class Library {
     private Map<Integer, Person> readers = new HashMap<>();
 
     private Map<Integer, Librarian> employees = new HashMap<>();
-    private List<Book> collection = new ArrayList<>();
+    private List<Book> collection = new ArrayList<Book>();
+
+    private List<Borrow> borrow_history = new ArrayList<>();
 
     public Library(){
         this.library_id = id++;
@@ -91,16 +93,48 @@ public class Library {
         return address;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
     public int getBook_count() {
         return book_count;
     }
 
     public void setBook_count(int book_count) {
         this.book_count = book_count;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public Map<Integer, Person> getReaders() {
+        return readers;
+    }
+
+    public void setReaders(Map<Integer, Person> readers) {
+        this.readers = readers;
+    }
+
+    public Map<Integer, Librarian> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(Map<Integer, Librarian> employees) {
+        this.employees = employees;
+    }
+
+    public List<Book> getCollection() {
+        return collection;
+    }
+
+    public void setCollection(List<Book> collection) {
+        this.collection = collection;
+    }
+
+    public List<Borrow> getBorrow_history() {
+        return borrow_history;
+    }
+
+    public void setBorrow_history(List<Borrow> borrow_history) {
+        this.borrow_history = borrow_history;
     }
 
     @Override

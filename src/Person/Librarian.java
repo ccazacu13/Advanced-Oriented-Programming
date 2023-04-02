@@ -8,6 +8,9 @@ import java.util.*;
 
 public class Librarian extends Person{
 
+    private static int id = 0;
+
+    private final int librarian_id;
     private double salary;
 
     private Date contract_start;
@@ -15,11 +18,12 @@ public class Librarian extends Person{
     protected void method(){}
 
     public Librarian(){
-        super();
+        this.librarian_id = id++;
     }
 
     public Librarian(String first_name, String last_name, String CNP, String phone, Date birth_date, Address address, double salary, Date contract_start) {
         super(first_name, last_name, CNP, phone, birth_date, address);
+        this.librarian_id = id++;
         this.salary = salary;
         this.contract_start = contract_start;
     }
@@ -69,6 +73,10 @@ public class Librarian extends Person{
 
     public void setContract_start(Date contract_start) {
         this.contract_start = contract_start;
+    }
+
+    public int getLibrarian_id() {
+        return librarian_id;
     }
 
     @Override

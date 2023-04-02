@@ -7,6 +7,9 @@ import java.util.Scanner;
 
 public class Reader extends Person{
 
+    private static int id = 0;
+
+    private final int reader_id;
     private Date sign_up_date;
 
     private String favorite_genre;
@@ -14,10 +17,11 @@ public class Reader extends Person{
     protected void method(){}
 
     public Reader(){
-        super();
+        this.reader_id = id++;
     }
     public Reader(String first_name, String last_name, String CNP, String phone, Date birth_date, Address address, Date sign_up_date, String favorite_genre) {
         super(first_name, last_name, CNP, phone, birth_date, address);
+        this.reader_id = id++;
         this.sign_up_date = sign_up_date;
         this.favorite_genre = favorite_genre;
     }
@@ -36,6 +40,10 @@ public class Reader extends Person{
 
     public void setFavorite_genre(String favorite_genre) {
         this.favorite_genre = favorite_genre;
+    }
+
+    public int getReader_id() {
+        return reader_id;
     }
 
     @Override

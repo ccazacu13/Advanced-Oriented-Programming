@@ -9,18 +9,18 @@ public abstract class Person {
 
     private static int id;
 
-    private final int reader_id;
+    private final int person_id;
 
     private String first_name, last_name, CNP, phone;
     private Date birth_date;
     private Address address;
     public Person(){
-        this.reader_id = id++;
+        this.person_id = id++;
     }
 
     protected abstract void method();
     public Person(String first_name, String last_name, String CNP, String phone, Date birth_date, Address address) {
-        this.reader_id = id++;
+        this.person_id = id++;
         this.first_name = first_name;
         this.last_name = last_name;
         this.CNP = CNP;
@@ -111,10 +111,14 @@ public abstract class Person {
         this.address = address;
     }
 
+    public int getPerson_id() {
+        return person_id;
+    }
+
     @Override
     public String toString() {
         return
-                "reader_id=" + reader_id +
+                "reader_id=" + person_id +
                 ", first_name='" + first_name + '\'' +
                 ", last_name='" + last_name + '\'' +
                 ", CNP='" + CNP + '\'' +

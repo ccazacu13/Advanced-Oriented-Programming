@@ -72,7 +72,7 @@ public class MainService {
                             System.out.println("This is not a valid index");
                         }
                     }
-                    LibraryService.manage_library(libraries, option - 1);
+                    LibraryService.manage_library(scanner, libraries, option - 1);
                     break;
                 case "4":
                     if(libraries.size() == 0) {
