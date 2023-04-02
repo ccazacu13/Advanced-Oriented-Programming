@@ -32,6 +32,10 @@ public class LibraryService {
 
     public static void remove_library(List<Library> libraries, int id)
     {
+        if (libraries.size() == 0) {
+            return;
+        }
+
         if( id >= 0 && id < libraries.size()) {
             libraries.remove(id - 1);
             System.out.println("Library removed successfully!");
@@ -40,5 +44,12 @@ public class LibraryService {
             System.out.println("This is not a valid Library number!");
         }
         System.out.println();
+    }
+
+    public static void manage_library(List<Library> libraries, int id)
+    {
+        System.out.println("Now we are managing library:  " + libraries.get(id).getName());
+        String opt = "";
+
     }
 }

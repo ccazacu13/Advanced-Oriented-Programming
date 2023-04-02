@@ -1,7 +1,7 @@
 package Library;
 
 import Person.*;
-
+import Book.*;
 import java.util.*;
 
 public class Library {
@@ -15,7 +15,10 @@ public class Library {
 
     private int book_count;
 
-    Map<Integer, Person> readers = new HashMap<>();
+    private Map<Integer, Person> readers = new HashMap<>();
+
+    private Map<Integer, Librarian> employees = new HashMap<>();
+    private List<Book> collection = new ArrayList<>();
 
     public Library(){
         this.library_id = id++;

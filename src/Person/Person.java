@@ -18,7 +18,7 @@ public abstract class Person {
         this.reader_id = id++;
     }
 
-    public abstract void method();
+    protected abstract void method();
     public Person(String first_name, String last_name, String CNP, String phone, Date birth_date, Address address) {
         this.reader_id = id++;
         this.first_name = first_name;
@@ -111,4 +111,15 @@ public abstract class Person {
         this.address = address;
     }
 
+    @Override
+    public String toString() {
+        return
+                "reader_id=" + reader_id +
+                ", first_name='" + first_name + '\'' +
+                ", last_name='" + last_name + '\'' +
+                ", CNP='" + CNP + '\'' +
+                ", phone='" + phone + '\'' +
+                ", birth_date=" + birth_date +
+                ", address=" + address;
+    }
 }
