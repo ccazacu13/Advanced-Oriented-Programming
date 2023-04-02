@@ -26,8 +26,8 @@
   <li>Gestiune biblioteca</li>
   <li>Adaugare cititor</li>
   <li>Adaugare bibliotecar</li>
-  <li>Adagare carti de fictiune</li>
-  <li>Adagaure carti de non-fictiune</li>
+  <li>Adaugare carti de fictiune</li>
+  <li>Adaugare carti de non-fictiune</li>
   <li>Realizarea unui imprumut</li>
   <li>Listarea cartilor dupa popularitate</li>
 </ul>
