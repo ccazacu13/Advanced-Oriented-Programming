@@ -17,11 +17,11 @@ public class Reader extends Person{
     protected void method(){}
 
     public Reader(){
-        this.reader_id = id++;
+        this.reader_id = ++id;
     }
     public Reader(String first_name, String last_name, String CNP, String phone, Date birth_date, Address address, Date sign_up_date, String favorite_genre) {
         super(first_name, last_name, CNP, phone, birth_date, address);
-        this.reader_id = id++;
+        this.reader_id = ++id;
         this.sign_up_date = sign_up_date;
         this.favorite_genre = favorite_genre;
     }

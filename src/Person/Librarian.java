@@ -18,7 +18,7 @@ public class Librarian extends Person{
     protected void method(){}
 
     public Librarian(){
-        this.librarian_id = id++;
+        this.librarian_id = ++id;
     }
 
     public Librarian(String first_name, String last_name, String CNP, String phone, Date birth_date, Address address, double salary, Date contract_start) {

@@ -20,12 +20,12 @@ public abstract class Book{
     protected abstract void method();
 
     public Book(){
-        this.book_id = id++;
+        this.book_id = ++id;
         this.authors_ids = new ArrayList<>();
     }
 
     public Book(String title, int page_count, Date release_date, List<Integer> authors_ids) {
-        this.book_id = id++;
+        this.book_id = ++id;
         this.title = title;
         this.page_count = page_count;
         this.release_date = release_date;

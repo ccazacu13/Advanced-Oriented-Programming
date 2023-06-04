@@ -5,7 +5,7 @@ import Book.*;
 import java.util.*;
 
 public class Library {
-    private static int id;
+    private static int id = 0;
 
     private final int library_id;
 
@@ -23,11 +23,11 @@ public class Library {
     private List<Borrow> borrow_history = new ArrayList<>();
 
     public Library(){
-        this.library_id = id++;
+        this.library_id = ++id;
     }
 
     public Library(String name, String phone, String email, Address address, int book_count) {
-        this.library_id = id++;
+        this.library_id = ++id;
         this.name = name;
         this.phone = phone;
         this.email = email;
@@ -135,6 +135,10 @@ public class Library {
 
     public void setBorrow_history(List<Borrow> borrow_history) {
         this.borrow_history = borrow_history;
+    }
+
+    public int getLibrary_id() {
+        return library_id;
     }
 
     @Override

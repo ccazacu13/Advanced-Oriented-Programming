@@ -16,13 +16,23 @@ public class Borrow {
 
     private int book_id;
 
+    private int library_id;
+
+    public int getLibrary_id() {
+        return library_id;
+    }
+
+    public void setLibrary_id(int library_id) {
+        this.library_id = library_id;
+    }
+
     private Date borrow_date;
 
     public Borrow(){
-        this.borrow_id = id++;
+        this.borrow_id = ++id;
     }
     public Borrow(int reader_id, int librarian_id, int book_id, Date borrow_date) {
-        this.borrow_id = id++;
+        this.borrow_id = ++id;
         this.reader_id = reader_id;
         this.librarian_id = librarian_id;
         this.book_id = book_id;

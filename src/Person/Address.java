@@ -86,4 +86,8 @@ public class Address {
                 ", postal_code=" + postal_code +
                 '}';
     }
+
+    public String returnAddressData(){
+        return country + ',' + city + ',' + street + ',' + postal_code;
+    }
 }
